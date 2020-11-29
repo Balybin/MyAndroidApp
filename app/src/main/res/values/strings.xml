@@ -6,9 +6,7 @@
     <string name="button_back">Back</string>
     <string name="string_age">13+</string>
     <string name="string_movie_name">
-        Avengers:
-        <br />\n
-        End Game
+        Avengers:\nEnd Game
     </string>
     <string name="string_movie_genres">Action, Adventure, Fantasy</string>
     <string name="string_number_of_reviews">125 REVIEWS</string>
@@ -19,4 +17,5 @@
     <string name="text_actor_2">Chris Evans</string>
     <string name="text_actor_3">Mark Ruffalo</string>
     <string name="text_actor_4">Chris Evans</string>
+    <string name="avengers_poster">Avengers poster</string>
 </resources>
