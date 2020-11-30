@@ -97,59 +97,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movie_name" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/star1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:src="@drawable/ic_star_icon_red"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/star2"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/movie_genre" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/star2"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="3.25dp"-->
-<!--            android:src="@drawable/ic_star_icon_red"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/star1"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/star3"-->
-<!--            app:layout_constraintStart_toEndOf="@id/star1"-->
-<!--            app:layout_constraintTop_toTopOf="@id/star1"/>-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/star3"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="3.25dp"-->
-<!--            android:src="@drawable/ic_star_icon_red"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/star2"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/star4"-->
-<!--            app:layout_constraintStart_toEndOf="@id/star2"-->
-<!--            app:layout_constraintTop_toTopOf="@id/star2" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/star4"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="3.25dp"-->
-<!--            android:src="@drawable/ic_star_icon_red"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/star3"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/star5"-->
-<!--            app:layout_constraintStart_toEndOf="@id/star3"-->
-<!--            app:layout_constraintTop_toTopOf="@id/star3" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/star5"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="3.25dp"-->
-<!--            android:src="@drawable/ic_star_icon_gray"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/star4"-->
-<!--            app:layout_constraintStart_toEndOf="@id/star4"-->
-<!--            app:layout_constraintTop_toTopOf="@id/star3" />-->
         <RatingBar android:id="@+id/ratingBar"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
