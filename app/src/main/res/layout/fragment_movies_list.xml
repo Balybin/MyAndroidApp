@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".FragmentMoviesList">
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/ic_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Movies list"
+        android:textColor="@color/textColorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_icon"
+        app:layout_constraintStart_toEndOf="@id/back_icon"
+        app:layout_constraintTop_toTopOf="@id/back_icon" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalMiddleLine"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/film1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="@id/verticalMiddleLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_icon"
+        app:strokeColor="#803B3B4D"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/movie_poster"
+                    app:shapeAppearanceOverlay="@style/circledCornersImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradient"
+                    app:shapeAppearanceOverlay="@style/circledCornersImageView" />
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/min_age"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/backgroundColor"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="13+"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/movie_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/string_movie_genres"
+                android:textColor="@color/textColorRed"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/ratingBar"
+                app:layout_constraintStart_toStartOf="@id/ratingBar" />
+
+            <com.idlestar.ratingstar.RatingStarView
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/number_of_reviews"
+                app:layout_constraintStart_toStartOf="@id/poster"
+                app:rsv_rating="3"
+                app:rsv_starMargin="2dp"
+                app:rsv_starNum="5" />
+
+            <TextView
+                android:id="@+id/number_of_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/string_number_of_reviews"
+                android:textColor="@color/textColorGray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                app:layout_constraintStart_toEndOf="@id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@id/poster"
+                app:layout_constraintTop_toTopOf="@id/ratingBar" />
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Avengers: End Game"
+                android:textColor="@color/textColorWhite"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/poster" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingBottom="8dp"
+                android:text="137 MIN"
+                android:textColor="@color/textColorGray"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@id/movie_name"
+                app:layout_constraintTop_toBottomOf="@id/movie_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
