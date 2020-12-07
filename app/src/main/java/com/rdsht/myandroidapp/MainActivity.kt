@@ -2,14 +2,12 @@ package com.rdsht.myandroidapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.FrameLayout
 
 class MainActivity : AppCompatActivity(), FragmentMoviesList.ClickListener,
     FragmentMovieDetails.MovieDetailsOnClickListener {
 
-    private val listFragment = FragmentMoviesList().apply { setListener(this@MainActivity) }
-    private val detailfragment = FragmentMovieDetails().apply { setListener(this@MainActivity) };
+    private val listFragment = FragmentMoviesList().apply { setClickListener(this@MainActivity) }
+    private val detailFragment = FragmentMovieDetails().apply { setListener(this@MainActivity) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,19 +21,19 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.ClickListener,
             .commit()
     }
 
-    override fun gotoDetail() {
+    override fun gotoDetail(movieId: Int) {
         supportFragmentManager.beginTransaction().setCustomAnimations(
             R.anim.enter_from_right, R.anim.exit_to_left,
             R.anim.enter_from_left, R.anim.exit_to_right
         ).remove(listFragment)
-            .add(R.id.fragment_container, detailfragment).commit()
+            .add(R.id.fragment_container, detailFragment).commit()
     }
 
     override fun back() {
         supportFragmentManager.beginTransaction().setCustomAnimations(
             R.anim.enter_from_right, R.anim.exit_to_left,
             R.anim.enter_from_left, R.anim.exit_to_right
-        ).remove(detailfragment)
+        ).remove(detailFragment)
             .add(R.id.fragment_container, listFragment).commit()
     }
 

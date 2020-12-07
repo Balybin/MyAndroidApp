@@ -32,7 +32,7 @@
         </FrameLayout>
 
         <ImageView
-            android:id="@+id/back_icon"
+            android:id="@+id/navigation_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -52,9 +52,9 @@
             android:fontFamily="@font/roboto_thin"
             android:textColor="@color/textColorWhite"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/back_icon"
-            app:layout_constraintStart_toEndOf="@id/back_icon"
-            app:layout_constraintTop_toTopOf="@id/back_icon" />
+            app:layout_constraintBottom_toBottomOf="@+id/navigation_icon"
+            app:layout_constraintStart_toEndOf="@id/navigation_icon"
+            app:layout_constraintTop_toTopOf="@id/navigation_icon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
             />
 
         <TextView
-            android:id="@+id/movie_genre"
+            android:id="@+id/movie_genres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -99,14 +99,14 @@
             app:layout_constraintTop_toBottomOf="@id/movie_name" />
 
 
-        <RatingBar android:id="@+id/ratingBar"
+        <RatingBar android:id="@+id/rating_bar"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
             style="@style/MyCustomRB"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
+            app:layout_constraintTop_toBottomOf="@id/movie_genres"
             app:layout_constraintEnd_toStartOf="@id/number_of_reviews"
             android:numStars="5"
             android:stepSize="1.0"
@@ -121,9 +121,9 @@
             android:fontFamily="@font/roboto_bold"
             android:textColor="@color/textColorGray"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
-            app:layout_constraintStart_toEndOf="@id/ratingBar"
-            app:layout_constraintTop_toTopOf="@id/ratingBar" />
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+            app:layout_constraintStart_toEndOf="@id/rating_bar"
+            app:layout_constraintTop_toTopOf="@id/rating_bar" />
 
         <TextView
             android:id="@+id/storyline"
